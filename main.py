@@ -96,7 +96,7 @@ def shortest_delivery_time(orders, initial_position):
     '''
     sorted_orders = sorted(
         orders,
-        key=lambda o: abs(o[2] - travel_time(
+        key=lambda o: abs(o.PT - travel_time(
             initial_position.lat, o.R.lat, initial_position.lon, o.R.lon))
         )
     efficient_route = get_efficient_route(sorted_orders, initial_position)
